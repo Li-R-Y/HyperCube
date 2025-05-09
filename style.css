@@ -9,15 +9,23 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column; /* Use flexbox to structure the layout */
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.75;
+    color: white;
     background-color: rgb(2, 12, 22);
 }
 
 /* Footer Styling */
 footer {
+    position: fixed; /* Fix the footer to the bottom of the page */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensure the footer spans the full width */
+    height: 2em; /* Set a fixed height for the footer */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
     text-align: center;
-    padding: 0em;
+    padding: 1em;
     font-size: 0.9em;
     background-color: rgb(2, 12, 22);
     color: white;
