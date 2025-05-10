@@ -2,12 +2,12 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%; /* Ensure the body takes up the full height of the viewport */
-    font-family: Arial, sans-serif; /* Use a sans-serif font for better readability */
+    font-family: 'Open Sans', sans-serif; /* Use a sans-serif font for better readability */
     font-size: 18px; /* Set base font size */
     font-weight: 400; /* Normal weight for body text */
     line-height: 1.75; /* Set line height for better readability */
-    background-color: rgb(2, 12, 22); /* Dark background for the body */
-    color: white; /* Light text color for contrast */
+    background-color: rgb(23, 23, 23); /* Black background for the body */
+    color: white; /* White text color for contrast */
 }
 
 /* General Page Styling */
@@ -22,33 +22,120 @@ main {
     flex: 1; /* Allow the main content to grow and take up available space */
 }
 
-.video {
+.hero, .header, .empty-line, .about, .contact {
     display: flex;
-    justify-content: center; /* Center this section */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    justify-content: center; /* Center items vertically */
+    background:
+        linear-gradient(
+            135deg,
+            #ff2c32ff,
+            #f04d2300 64%
+        ),
+        linear-gradient(
+            45deg,
+            #ff854dff,
+            #f04d2300 64%
+        ),
+        linear-gradient(
+            -135deg,
+            #406af8ff,
+            #662d9100 64%
+        ),
+        linear-gradient(
+            -45deg,
+            #ff66bcff,
+            #fbb04200 64%
+        ),
+        linear-gradient(white), no-repeat center center; /* Background image with gradient */
+    background-size: cover; /* Cover the entire section */
+    background-attachment: fixed; /* Fix the background image */
+}
+
+
+.hero {
     align-items: center; /* Align items to the center */
     margin: 0; /* Disable margin */
     padding: 0; /* Disable padding */
     width: 100dvw; /* Set width to 100% of the viewport */
-    height: 100dvmin; /* Set height to 100% of the viewport */
-    flex-direction: column; /* Align items in a column */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    height: 78vmin; /* Set height to 78% of the viewport */
+}
+.hero-container {
+    position: relative; /* Allows for absolute positioning of child elements */
+    top: 9vmin; /* Align to the top */
+    width: 50vmin;
+    max-width: 50vmin; /* Set max width to 50% of the viewport */
+    height: 50vmin;
+    max-height: 50vmin; /* Set max height to 50% of the viewport */
+    margin: 0 2em; /* Center the container */
+    padding: 0; /* Disable padding */
+    display: block; /* Ensure the container is a block element */
+}
+.hero-image {
+    position: absolute; /* Ensures the image is positioned relative to the container */
+    top: 50%; /* Center the image vertically */
+    left: 50%; /* Center the image horizontally */
+    transform: translate(-50%, -50%); /* Center the image */
+    max-width: 42vmin; /* Set max width to 42% of the viewport */
+    height: auto;
+    z-index: 0; /* Ensures the image is behind the GIF */
+    display: block; /* Ensure the image is a block element */
+}
+.hero-gif {
+    position: absolute; /* Allows for absolute positioning of the GIF */
+    top: 20.3%; /* Center the GIF vertically */
+    left: -2.5%; /* Center the GIF horizontally */
+    transform: rotate(45deg); /* Rotate it */
+    width: 88%; /* Set width to 88% of the container */
+    height: auto; /* Set height to auto */
+    max-width: 80vmin; /* Set max width to 80% of the viewport */
+    background-repeat: no-repeat; /* Prevents the GIF from repeating */
+    background-size: cover; /* Ensures the GIF covers the entire container */
+    z-index: 1; /* Brings the GIF in front of the image */
 }
 
-.about {
-    display: flex;
-    justify-content: center; /* Center this section */
-    align-items: left; /* Align items to the left */
-    margin: 1em 1em; /* Add margin for spacing */
-    flex-direction: column; /* Align items in a column */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+/* Header Styling */
+.header {
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Align to the top */
+    padding: 0; /* Disable padding */
+    margin: 0; /* Disable margin */
+    width: 100dvw; /* Set width to 100% of the viewport */
+    height: 12vmin; /* Set height to 12% of the viewport */
 }
-.contact {
+.header-text {
     display: flex;
-    justify-content: center; /* Center this section */
+    flex-direction: row; /* Align text in a row */
+    font-size: 8vmin; /* Set font size */
+    font-weight: 300; /* Set font weight */
+    text-align: center; /* Center the text */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+}
+.header-Hyper {
+    color: #fe48f8; /* Hyper text color */
+}
+.header-C {
+    color: #fc5a24; /* C text color */
+}
+.header-ube {
+    color: #383838; /* Black text color */
+}
+
+
+.empty-line {
+    display: block; /* Ensure the empty line is a block element */
+    width: 100dvw; /* Set width to 100% of the viewport */
+    height: 10vmin; /* Set height to 10% of the viewport */
+}
+
+
+/* About and Contact Section Styling */
+.about, .contact {
     align-items: left; /* Align items to the left */
-    margin: 1em 1em; /* Add margin for spacing */
-    flex-direction: column; /* Align items in a column */
-    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+    margin: 0em; /* Remove margin */
+    padding: 1em 1em; /* Add padding for spacing */
 }
 
 /* Footer Styling */
