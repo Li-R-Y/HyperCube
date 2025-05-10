@@ -2,30 +2,62 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%; /* Ensure the body takes up the full height of the viewport */
+    font-family: Arial, sans-serif; /* Use a sans-serif font for better readability */
+    font-size: 18px; /* Set base font size */
+    font-weight: 400; /* Normal weight for body text */
+    line-height: 1.75; /* Set line height for better readability */
+    background-color: rgb(2, 12, 22); /* Dark background for the body */
+    color: white; /* Light text color for contrast */
 }
 
 /* General Page Styling */
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column; /* Use flexbox to structure the layout */
-    line-height: 1.75;
-    color: white;
-    background-color: rgb(2, 12, 22);
+    height: 100dvh; /* Ensure the page takes up the full viewport height */
+}
+
+main {
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow the main content to grow and take up available space */
+}
+
+.video {
+    display: flex;
+    justify-content: center; /* Center this section */
+    align-items: center; /* Align items to the center */
+    margin: 0; /* Disable margin */
+    padding: 0; /* Disable padding */
+    width: 100dvw; /* Set width to 100% of the viewport */
+    height: 100dvmin; /* Set height to 100% of the viewport */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+
+.about {
+    display: flex;
+    justify-content: center; /* Center this section */
+    align-items: left; /* Align items to the left */
+    margin: 1em 1em; /* Add margin for spacing */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
+}
+.contact {
+    display: flex;
+    justify-content: center; /* Center this section */
+    align-items: left; /* Align items to the left */
+    margin: 1em 1em; /* Add margin for spacing */
+    flex-direction: column; /* Align items in a column */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if necessary */
 }
 
 /* Footer Styling */
 footer {
-    position: fixed; /* Fix the footer to the bottom of the page */
     bottom: 0;
     left: 0;
     width: 100%; /* Ensure the footer spans the full width */
-    height: 2em; /* Set a fixed height for the footer */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
     text-align: center;
-    padding: 1em;
+    padding: 0.1em;
     font-size: 0.9em;
     background-color: rgb(2, 12, 22);
     color: white;
