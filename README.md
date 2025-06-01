@@ -1,3 +1,3 @@
 # Hypercube
 
-https://starrrryl.github.io/HyperCube
+https://li-r-y.github.io/HyperCube/
